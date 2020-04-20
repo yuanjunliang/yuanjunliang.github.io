@@ -19,3 +19,5 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+- [vue打包后vendor.js文件过大解决方案](https://juejin.im/post/5d1c39b65188257cbb476f44)
