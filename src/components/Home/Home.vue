@@ -42,6 +42,14 @@ export default {
       } catch (error) {
       }
     },
+    async getReadme () {
+      try {
+        let url = '/README.md'
+        let result = await axios.get(url)
+        this.content = result.data
+      } catch (error) {
+      }
+    },
     async handleClickPost (params) {
       try {
         let { key, item } = params
@@ -57,6 +65,7 @@ export default {
   },
   mounted () {
     this.getMenus()
+    this.getReadme()
   }
 }
 </script>
