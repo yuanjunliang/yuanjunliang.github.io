@@ -1,10 +1,11 @@
 <template>
   <div class="container">
     <div class="header">
-      <h1>袁俊亮技术博客</h1>
+      <h1><router-link to="/">袁俊亮技术博客</router-link></h1>
+      <i @click="isShowSideBar = !isShowSideBar" class="el-icon-s-home"></i>
     </div>
     <div class="content">
-      <div class="sidebar">
+      <div :class="[{'sidebar-hide':isShowSideBar}, 'sidebar']">
         <home-side-bar @handleClickPost="handleClickPost" :menus="menus"></home-side-bar>
       </div>
       <div class="main-content">
@@ -19,17 +20,20 @@
 import axios from '@/plugin/axios'
 import HomeSideBar from './HomeSideBar'
 import HomeContent from './HomeContent'
+import { Icon } from 'element-ui'
 
 export default {
   name: 'Home',
   components: {
     HomeSideBar,
-    HomeContent
+    HomeContent,
+    Icon
   },
   data () {
     return {
       menus: {},
-      content: ''
+      content: '',
+      isShowSideBar: true
     }
   },
   methods: {
@@ -58,7 +62,6 @@ export default {
         let data = result.data
         this.content = data
       } catch (error) {
-        console.log('slkjdfklsjflsfjsdlfhahahha')
         this.content = 'No Data'
       }
     }
@@ -82,10 +85,14 @@ export default {
   padding: 0px 30px;
   border-bottom: solid 1px #eee;
 }
+.el-icon-s-home {
+  display: none;
+}
 .content {
   display: flex;
   flex: 1;
   flex-direction: row;
+  padding: 0 10px;
 }
 
 .sidebar {
@@ -105,11 +112,39 @@ export default {
 .main-content {
   display: flex;
   flex: 1;
-  max-width: 1200px;
-  overflow: auto;
 }
 .footer {
   height: 100px;
   background-color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+  }
+  .el-icon-s-home {
+    display: flex;
+  }
+  .header >h1 {
+    font-size: 18px;
+  }
+  .sidebar {
+    display: block;
+    width: 100%;
+  }
+  .sidebar-hide {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
 }
 </style>

@@ -38,6 +38,15 @@ export default {
 <style scoped>
 .home-main-content {
   padding: 30px;
+  width: 1200px;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-main-content {
+    width: 96%;
+    padding: 0px;
+    margin: 0 auto;
+  }
 }
 </style>
 

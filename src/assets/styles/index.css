@@ -7,8 +7,11 @@ body {
   color: #606c71;
   line-height: 1.5;
   font-size: 1rem;
+  /* padding: 0 10px; */
 }
 
 p {
   line-height: 1.7;
+  word-wrap:break-word;
+  word-break:break-all;
 }
