@@ -7,7 +7,7 @@
       <div class="sidebar">
         <home-side-bar @handleClickPost="handleClickPost" :menus="menus"></home-side-bar>
       </div>
-      <div class="main-contnet">
+      <div class="main-content">
         <home-content :content="content"></home-content>
       </div>
     </div>
@@ -102,9 +102,11 @@ export default {
   margin: 10px 0px;
 }
 
-.main-contnet {
+.main-content {
   display: flex;
   flex: 1;
+  max-width: 1200px;
+  overflow: auto;
 }
 .footer {
   height: 100px;
