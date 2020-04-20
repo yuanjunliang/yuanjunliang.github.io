@@ -1,0 +1,14 @@
+.main-w {
+  width: 1200px;
+}
+
+body {
+  font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+  color: #606c71;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.7;
+}
