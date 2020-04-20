@@ -1,0 +1,24 @@
+{
+  "name": "yuanjunliang.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "lite-server -c ./lite-server.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanjunliang/yuanjunliang.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuanjunliang/yuanjunliang.github.io/issues"
+  },
+  "homepage": "https://github.com/yuanjunliang/yuanjunliang.github.io#readme"
+}
