@@ -1,5 +1,7 @@
 # 服务发现：Zookeeper vs etcd vs Consul
 
+[TOC]
+
 # 服务发现：Zookeeper vs etcd vs Consul
 
 【编者的话】本文对比了 Zookeeper、etcd 和 Consul 三种服务发现工具，探讨了最佳的服务发现解决方案，仅供参考。
