@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header">
       <h1><router-link to="/">{{blogName}}</router-link></h1>
-      <div class="ad-header" v-html="adsHeader">
+      <div class="ads-header" v-html="adsHeader">
       </div>
       <i @click="isShowSideBar = !isShowSideBar" class="el-icon-s-home"></i>
     </div>
@@ -130,11 +130,11 @@ export default {
     flex-direction: column;
   }
   .header {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     height: 50px;
-    justify-content: space-between;
+  }
+  .ads-header {
+    display: none;
   }
   .el-icon-s-home {
     display: flex;
