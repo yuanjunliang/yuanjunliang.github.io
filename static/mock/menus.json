@@ -6,5 +6,8 @@
   "Go": [
     "进程守护脚本",
     "服务发现：Zookeeper vs etcd vs Consul"
+  ],
+  "以太坊": [
+    "Solidity细节知识点"
   ]
 }
