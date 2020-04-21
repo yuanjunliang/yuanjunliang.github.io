@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="header">
-      <h1><router-link to="/">袁俊亮技术博客</router-link></h1>
+      <h1><router-link to="/">{{blogName}}</router-link></h1>
       <i @click="isShowSideBar = !isShowSideBar" class="el-icon-s-home"></i>
     </div>
     <div class="content">
@@ -33,7 +33,8 @@ export default {
     return {
       menus: {},
       content: '',
-      isShowSideBar: true
+      isShowSideBar: true,
+      blogName: window.config.blogName || '个人博客'
     }
   },
   methods: {
