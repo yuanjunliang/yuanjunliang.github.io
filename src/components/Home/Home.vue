@@ -2,6 +2,8 @@
   <div class="container">
     <div class="header">
       <h1><router-link to="/">{{blogName}}</router-link></h1>
+      <div class="ad-header" v-html="adsHeader">
+      </div>
       <i @click="isShowSideBar = !isShowSideBar" class="el-icon-s-home"></i>
     </div>
     <div class="content">
@@ -34,7 +36,8 @@ export default {
       menus: {},
       content: '',
       isShowSideBar: true,
-      blogName: window.config.blogName || '个人博客'
+      blogName: window.config.blogName || '个人博客',
+      adsHeader: window.config.ads.header || ''
     }
   },
   methods: {
@@ -82,6 +85,9 @@ export default {
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 100px;
   padding: 0px 30px;
   border-bottom: solid 1px #eee;

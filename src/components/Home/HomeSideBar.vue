@@ -14,6 +14,9 @@
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
+    <div class="ads-sidebar" v-html="adsSidebar">
+
+    </div>
   </div>
 </template>
 
@@ -23,6 +26,11 @@ export default {
   name: 'HomeSideBar',
   props: {
     menus: Object
+  },
+  data () {
+    return {
+      adsSidebar: window.config.ads.sidebar || ''
+    }
   },
   components: {
     Col,
