@@ -14,7 +14,9 @@
     "Solidity地址Address",
     "Solidity中的delete操作",
     "Solidity数据存储",
-    "以太坊中的单位换算"
+    "以太坊中的单位换算",
+    "以太坊中的nonce",
+    "以太坊如何估算Gas"
   ],
   "区块链": [
     "什么是拜占庭将军问题",
